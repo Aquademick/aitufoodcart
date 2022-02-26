@@ -1,0 +1,356 @@
+* {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  position: absolute;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.container {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5em;
+  background-color: #21242b;
+  border-bottom: 10px solid #87CEFA;
+}
+i {
+  color: #87CEFA;
+  font-size: 2.5em;
+  text-align: center;
+}
+span.num {
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+span.text {
+  color: #e0e0e0;
+  font-size: 1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+
+.rollButton {
+  padding: 15px 25px;
+  position: absolute; top: 390px; left: 722px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #33A1FF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: "Poppins", sans-serif;
+}
+
+.rollButton:hover {background-color: #337FFF}
+
+.rollButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+@media (max-width: 1600px) {
+  .table-fill {
+    position: absolute; left: 900px; top: 208px;
+  }
+}
+@media (max-width: 1400px) {
+  .rollButton{
+    position: absolute; left: 515px; top: 350px;
+  }
+  .table-fill {
+    position: absolute; left: 205px; top: 500px;
+  }
+  .rules {
+    display: none;
+  }
+  .keyboard {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .rollButton{
+    position: absolute; left: 420px; top: 350px;
+  }
+  .table-fill {
+    position: absolute; left: 150px; top: 500px;
+  }
+  .rules {
+    display: none;
+  }
+  .keyboard {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .rollButton{
+    position: absolute; left: 270px; top: 350px;
+  }
+  .table-fill {
+    position: absolute; left: 30px; top: 500px;
+  }
+  .rules {
+    display: none;
+  }
+  .keyboard {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .rollButton{
+    position: absolute; left: 195px; top: 350px;
+  }
+  .table-fill {
+    position: absolute; left: 0px; top: 500px;
+  }
+  .rules {
+    display: none;
+  }
+  .keyboard {
+    display: none;
+  }
+}
+
+body {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 900px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+.rules-header {
+  position: absolute; top: 210px; left: 130px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: bold;
+}
+.rules-text1 {
+  position: absolute; top: 255px; left: 130px;
+  font-family: Poppins;
+  font-size: 18px;
+}
+.rules-text2 {
+  position: absolute; top: 285px; left: 130px;
+  font-family: Poppins;
+  font-size: 18px;
+}
+.rules-text3 {
+  position: absolute; top: 315px; left: 130px;
+  font-family: Poppins;
+  font-size: 18px;
+}
+.rules-text4 {
+  position: absolute; top: 345px; left: 130px;
+  font-family: Poppins;
+  font-size: 18px;
+}
+.rules-text5 {
+  position: absolute; top: 400px; left: 130px;
+  font-family: Poppins;
+  font-size: 24px;
+}
+
+
+.keyboard {
+  position: absolute; top: 450px; left: 130px;
+  border-radius: 5px;
+  font-size: 36px;
+}
+
+.flip-box {
+  background-color: transparent;
+  position: absolute; top: 200px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}

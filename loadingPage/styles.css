@@ -1,0 +1,49 @@
+#train {
+      position: relative;
+      cursor: pointer;
+    }
+body {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pizza {
+  position: absolute; left: 500px; top:50px;
+  width: 35%;
+}
+
+.loading-text {
+  color: black;
+  font-size: 48px;
+  font-family: Rowdies;
+  position:absolute; left:500px; top:550px;
+}
+
+#dot1 {
+  color: black;
+  font-size: 48px;
+  font-family: Rowdies;
+  position:absolute; left:1010px; top:550px;
+}
+
+#dot2 {
+  color: black;
+  font-size: 48px;
+  font-family: Rowdies;
+  position:absolute; left:1022px; top:550px;
+}
+
+#dot3 {
+  color: black;
+  font-size: 48px;
+  font-family: Rowdies;
+  position:absolute; left:1034px; top:550px;
+}
+
+@media(max-width:650px){
+  .loading-text {
+    font-size: 10px;
+  }
+}
